@@ -23,7 +23,11 @@ const App = () => (
           <Route path="/getting-started" element={<GettingStarted />} />
           <Route path="/documentation" element={<Documentation />} />
           <Route path="/example-project" element={<ExampleProject />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/example-project/payment-system" element={<ExampleProject />} />
+          <Route path="/example-project/payment-system-services" element={<ExampleProject />} />
+          <Route path="/example-project/payment-system-services-gateway" element={<ExampleProject />} />
+          <Route path="/example-project/payment-system-services-processor" element={<ExampleProject />} />
+          <Route path="/example-project/payment-system-services-analytics" element={<ExampleProject />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

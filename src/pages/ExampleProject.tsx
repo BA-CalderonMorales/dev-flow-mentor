@@ -6,21 +6,47 @@ import CodeBlock from '@/components/CodeBlock';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 const ExampleProject = () => {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
       
-      <div className="container flex-1 py-8">
-        <div className="flex flex-col md:flex-row gap-8">
-          <div className="hidden md:block">
+      <div className="container flex-1 py-4 md:py-8">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-8">
+          <div className="md:hidden">
+            <ScrollArea className="h-[60px] w-full">
+              <div className="flex items-center gap-2 px-4">
+                <Button variant="ghost" size="sm" asChild>
+                  <Link to="/example-project">Overview</Link>
+                </Button>
+                <Button variant="ghost" size="sm" asChild>
+                  <Link to="/example-project/payment-system">Design</Link>
+                </Button>
+                <Button variant="ghost" size="sm" asChild>
+                  <Link to="/example-project/payment-system-services">Services</Link>
+                </Button>
+                <Button variant="ghost" size="sm" asChild>
+                  <Link to="/example-project/payment-system-services-gateway">Gateway</Link>
+                </Button>
+                <Button variant="ghost" size="sm" asChild>
+                  <Link to="/example-project/payment-system-services-processor">Processor</Link>
+                </Button>
+                <Button variant="ghost" size="sm" asChild>
+                  <Link to="/example-project/payment-system-services-analytics">Analytics</Link>
+                </Button>
+              </div>
+            </ScrollArea>
+          </div>
+          
+          <div className="hidden md:block w-64">
             <div className="sticky top-24">
               <Sidebar />
             </div>
           </div>
           
-          <main className="flex-1 max-w-3xl">
+          <main className="flex-1 max-w-3xl px-4 md:px-0">
             <article className="prose max-w-none">
               <h1>Example Project: Payment System</h1>
               
