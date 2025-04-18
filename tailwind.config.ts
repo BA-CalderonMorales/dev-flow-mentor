@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,15 +53,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				docs: {
+					DEFAULT: 'hsl(var(--docs-background))',
+					foreground: 'hsl(var(--docs-foreground))',
+					accent: 'hsl(var(--docs-accent))',
+					'accent-foreground': 'hsl(var(--docs-accent-foreground))',
+					highlight: 'hsl(var(--docs-highlight))',
+					border: 'hsl(var(--docs-border))',
+					code: 'hsl(var(--docs-code))',
+					'code-background': 'hsl(var(--docs-code-background))'
 				}
 			},
 			borderRadius: {
@@ -89,8 +90,29 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: '65ch',
+						color: 'hsl(var(--docs-foreground))',
+						a: {
+							color: 'hsl(var(--docs-accent))',
+							'&:hover': {
+								color: 'hsl(var(--docs-accent-foreground))',
+							},
+						},
+						code: {
+							color: 'hsl(var(--docs-code))',
+							backgroundColor: 'hsl(var(--docs-code-background))',
+							padding: '0.2em 0.4em',
+							borderRadius: '0.25rem',
+							fontWeight: '500',
+						},
+					},
+				},
+			},
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography')],
 } satisfies Config;
