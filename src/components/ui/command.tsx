@@ -1,3 +1,7 @@
+/**
+ * This file can be safely removed - it's not used in the application.
+ */
+
 import * as React from "react"
 import { type DialogProps } from "@radix-ui/react-dialog"
 import { Command as CommandPrimitive } from "cmdk"

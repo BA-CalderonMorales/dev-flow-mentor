@@ -1,3 +1,7 @@
+/**
+ * This file can be safely removed - it's not used in the application.
+ */
+
 import * as React from "react"
 import * as TogglePrimitive from "@radix-ui/react-toggle"
 import { cva, type VariantProps } from "class-variance-authority"

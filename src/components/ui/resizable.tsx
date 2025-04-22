@@ -1,3 +1,7 @@
+/**
+ * This file can be safely removed - it's not used in the application.
+ */
+
 import { GripVertical } from "lucide-react"
 import * as ResizablePrimitive from "react-resizable-panels"
 

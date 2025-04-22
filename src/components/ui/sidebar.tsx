@@ -1,3 +1,10 @@
+/**
+ * This file can be safely removed - it's a complex sidebar implementation 
+ * that is not actually used in the application.
+ * 
+ * The application uses the simpler Sidebar component at src/components/Sidebar.tsx instead.
+ */
+
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { VariantProps, cva } from "class-variance-authority"

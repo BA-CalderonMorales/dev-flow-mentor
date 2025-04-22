@@ -1,3 +1,7 @@
+/**
+ * This file can be safely removed - it's not used in the application.
+ */
+
 import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from "lucide-react"
